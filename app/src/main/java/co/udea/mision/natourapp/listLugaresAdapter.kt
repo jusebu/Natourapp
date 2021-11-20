@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 
 class ListLugaresAdapter( private  val lugaresList :ArrayList<Lugar>)
@@ -35,7 +36,7 @@ return lugaresList.size
             nameTextView.text=lugar.nombre
             descripcionTextView.text=lugar.descripcion
             puntajeTextView.text= lugar.calificacion.toString()
-            //picturependiente
+            Picasso.get().load(lugar.urlImage).into(pictureView)
         }
     }
 }
