@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Natourapp">
         <activity
+            android:name=".ListLugarActivity"
+            android:exported="true" />
+        <activity
             android:name=".RegisterActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
