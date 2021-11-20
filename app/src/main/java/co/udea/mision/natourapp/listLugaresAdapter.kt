@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
 
-class ListLugaresAdapter( private  val lugaresList :ArrayList<Lugar>)
+class ListLugaresAdapter( private  val lugaresList :ArrayList<LugarItem>)
     :RecyclerView.Adapter<ListLugaresAdapter.ViewHolder> (){
 
 
@@ -31,11 +31,11 @@ return lugaresList.size
         private var descripcionTextView:TextView= itemview.findViewById(R.id.description_textView)
         private var puntajeTextView:TextView= itemview.findViewById(R.id.puntaje_text_view)
         private var pictureView:ImageView= itemview.findViewById(R.id.pictureImageView)
-        fun bind(lugar: Lugar){
+        fun bind(lugar: LugarItem){
 
             nameTextView.text=lugar.nombre
             descripcionTextView.text=lugar.descripcion
-            puntajeTextView.text= lugar.calificacion.toString()
+            puntajeTextView.text= lugar.caliicacion.toString()
             Picasso.get().load(lugar.urlImage).into(pictureView)
         }
     }
